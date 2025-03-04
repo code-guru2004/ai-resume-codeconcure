@@ -5,9 +5,10 @@ import { useContext, useEffect } from "react";
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import CoolButton from "@/components/shared/CoolBtn";
-import CoolButton2 from "@/components/shared/CoolBtn2";
+
 import { UserDeatilsContext } from "./_context/UserDetailsContext";
+import CoolButton2 from "@/components/shared/CoolBtn2";
+import CoolButton from "@/components/shared/CoolBtn";
 
 export default function Home() {
 
