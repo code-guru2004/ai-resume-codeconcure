@@ -11,6 +11,7 @@ import {
 } from '@clerk/nextjs'
 import "./globals.css";
 import Provider from "./Provider";
+import Loader from "@/components/shared/Loader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,7 +38,7 @@ export default function RootLayout({ children }) {
       >
           <ClerkLoading className="flex items-center justify-center">
             <div className="w-full h-screen flex items-center justify-center text-2xl">
-              Loading...
+              <Loader/>
             </div>
           </ClerkLoading>
           <ClerkLoaded>

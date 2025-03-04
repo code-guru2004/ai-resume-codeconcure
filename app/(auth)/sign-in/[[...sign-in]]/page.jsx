@@ -11,21 +11,15 @@ export default function SignInPage() {
 
   useEffect(() => {
     if (isSignedIn) {
-      redirect('/dashboard') // Navigate AFTER the render
+      redirect('/dashboard') 
     }
-  }, [isSignedIn, router]); // Add isSignedIn and router to the dependency array
+  }, [isSignedIn, router]); 
 
   if (isSignedIn) {
-    return null; // Or a loading indicator if you prefer
+    return null; 
   }
   return(
   <div className=''>
-    {/*
-  Heads up! 👋
-
-  Plugins:
-    - @tailwindcss/forms
-*/}
 
 <section className="bg-white dark:bg-gray-900">
   <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
