@@ -3,16 +3,11 @@ import {
   ClerkLoaded,
   ClerkLoading,
   ClerkProvider,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
 } from '@clerk/nextjs'
 import "./globals.css";
 import Provider from "./Provider";
 import Loader from "@/components/shared/Loader";
-
+import { Toaster } from "@/components/ui/sonner"
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -45,7 +40,9 @@ export default function RootLayout({ children }) {
             <Provider>
               {children}
             </Provider>
+            <Toaster />
           </ClerkLoaded>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
       </body>
     </html>
     </ClerkProvider>

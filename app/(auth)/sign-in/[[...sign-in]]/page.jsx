@@ -1,11 +1,12 @@
 'use client'
 import { useUser } from '@clerk/clerk-react';
-import { redirect, useRouter } from 'next/navigation';
-import { useEffect } from 'react'; // Import useEffect
+import { redirect, usePathname, useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react'; // Import useEffect
 import { SignIn } from '@clerk/clerk-react';
 import Image from 'next/image';
 
 export default function SignInPage() {
+  const route = useRouter
   const { isSignedIn } = useUser();
   const router = useRouter();
 
