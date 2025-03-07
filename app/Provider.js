@@ -7,7 +7,7 @@ import { UserDeatilsContext } from "./_context/UserDetailsContext";
 
 export default function Provider({children}){
     const {user} = useUser();
-    //console.log(user);
+    //console.log("user",user?.user);
     
     const [userDetails, setUserDetails] = useState(null)
 
@@ -19,7 +19,7 @@ export default function Provider({children}){
            // console.log(user);
             
             const resp = await axios.post('/api/verify-user',{
-                user:user
+                user:user,
             });
 
             // if(resp){

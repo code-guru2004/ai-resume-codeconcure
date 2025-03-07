@@ -6,10 +6,8 @@ import { NextResponse } from "next/server";
 export async function POST(req){
     const {user} = await req.json();
     try {
-        //console.log(user);
+        // console.log(user?.p);
         
-     
-            
             const isUserExist = await db.select().from(UsersTable).where(eq(UsersTable.email,user?.primaryEmailAddress?.emailAddress));
 
             //console.log(isUserExist[0]);
