@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { UserDeatilsContext } from "./_context/UserDetailsContext";
 import CoolButton2 from "@/components/shared/CoolBtn2";
 import CoolButton from "@/components/shared/CoolBtn";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -75,7 +76,7 @@ export default function Home() {
             {userDetails?.email ?
               <CoolButton/>
               : <div >
-                <Button>Get Started</Button>
+                <Link href={'/dashboard'}>Get Started</Link>
               </div>
             }
 
